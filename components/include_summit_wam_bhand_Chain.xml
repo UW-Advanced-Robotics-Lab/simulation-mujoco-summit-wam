@@ -59,6 +59,8 @@
         <joint name="smt/pose/y"                            type="slide" pos="0 0 0.4" axis="-1 0 0"  damping="15"/>
         <joint name="smt/orie/z"                            type="hinge" pos="0 0 0.4" axis="0 0 1"  damping="10"/>
 
+        <!-- Place imu-sensors here. Have them rotated to match the MB control-axis | w x y z-->
+        <site name="mb_imu_sensor_site" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3" quat="0.7071068 0 0 0.7071068"/>
         <!-- === whl LINK === === === === -->
         <!-- Mobile whls -->
         <body name="smt/whl/LF_link" pos="0 0 0">

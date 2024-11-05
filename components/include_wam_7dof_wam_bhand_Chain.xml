@@ -71,6 +71,8 @@
             <geom                   class="wam/col" mesh="shoulder_link_convex_decomposition_p1"/>
             <geom                   class="wam/col" mesh="shoulder_link_convex_decomposition_p2"/>
             <geom                   class="wam/col" mesh="shoulder_link_convex_decomposition_p3"/>
+            <!-- Place imu sensors here. -->
+            <site name="imu_sensor_site_wam_shoulder_yaw_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
             
             <body name="wam/shoulder_pitch_link" pos="0 0 0" quat="0.707107 -0.707107 0 0"> 
                 <!-- ### Inertial Ref: (*1, pg.14) unit: [m, kg, kg * m^2] 
@@ -82,7 +84,9 @@
                 <joint name="wam/J2"    range="-2.0 2.0" damping="1000" frictionloss="1000" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
                 <geom                   class="wam/shoulder_pitch_link/viz" mesh="shoulder_pitch_link_fine"/>
                 <geom                   class="wam/col" mesh="shoulder_pitch_link_convex"/>
-                
+                <!-- Place imu sensors here. -->
+                <site name="imu_sensor_site_wam_shoulder_pitch_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+
                 <body name="wam/upper_arm_link" pos="0 0 0" quat="0.707107 0.707107 0 0">
                     <!-- ### Inertial Ref: (*1, pg.16) unit: [m, kg, kg * m^2] 
                         Note: 
@@ -96,6 +100,8 @@
                     <geom                   class="wam/upper_arm_link/viz" mesh="upper_arm_link_fine"/>
                     <geom                   class="wam/col" mesh="upper_arm_link_convex_decomposition_p1"/>
                     <geom                   class="wam/col" mesh="upper_arm_link_convex_decomposition_p2"/>
+                    <!-- Place imu sensors here. -->
+                    <site name="imu_sensor_site_wam_upper_arm_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
                     
                     <body name="wam/forearm_link" pos="0.045 0 0.55" quat="0.707107 -0.707107 0 0">
                         <!-- ### Inertial Ref: (*1, pg.22) unit: [m, kg, kg * m^2]
@@ -114,7 +120,9 @@
                         <geom                   class="wam/fore_arm_link/viz" mesh="forearm_link_fine" pos="-.045 -0.0730 0" euler="1.57 0 0"/>
                         <geom                   class="wam/col" mesh="forearm_link_convex_decomposition_p1" pos="-0.045 -0.0730 0" euler="1.57 0 0"/>
                         <geom                   class="wam/col" mesh="forearm_link_convex_decomposition_p2" pos="-0.045 -0.0730 0" euler="1.57 0 0"/>
-                        
+                        <!-- Place imu sensors here. -->
+                        <site name="imu_sensor_site_wam_forearm_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+
                         <!-- [Optional] ZED Camera on forearm link, TODO: uncertain for inertial params -->
                         <!-- <body name="wam/sensor/zed" pos="-0.18 -0.15 0" quat="0 0.707107 0 0.707107">
                             <inertial               pos="0 0 0.015" mass="0.124"/>
@@ -135,7 +143,9 @@
                             <geom                   class="wam/wrist_yaw_link/viz" mesh="wrist_yaw_link_fine"/>
                             <geom                   class="wam/col" mesh="wrist_yaw_link_convex_decomposition_p1"/>
                             <geom                   class="wam/col" mesh="wrist_yaw_link_convex_decomposition_p2"/>
-                            
+                            <!-- Place imu sensors here. -->
+                            <site name="imu_sensor_site_wam_wrist_yaw_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+
                             <body name="wam/wrist_pitch_link" pos="0 0 0" quat="0.707107 -0.707107 0 0">
                                 <!-- ### Inertial Ref: (*1, pg.26) unit: [m, kg, kg * m^2] 
                                     Note:
@@ -148,7 +158,9 @@
                                 <geom                   class="wam/col" mesh="wrist_pitch_link_convex_decomposition_p1"/>
                                 <geom                   class="wam/col" mesh="wrist_pitch_link_convex_decomposition_p2"/>
                                 <geom                   class="wam/col" mesh="wrist_pitch_link_convex_decomposition_p3"/>
-                                
+                                <!-- Place imu sensors here. -->
+                                <site name="imu_sensor_site_wam_wrist_pitch_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+
                                 <body name="wam/wrist_palm_link" pos="0 0 0" quat="0.707107 0.707107 0 0">
                                     <!-- ### Inertial Ref: (*1, pg.14) unit: [m, kg, kg * m^2] 
                                         Note:
@@ -160,7 +172,8 @@
                                     <joint name="wam/J7"    range="-2.2 2.2" damping="10" frictionloss="1000" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
                                     <geom                   class="wam/wrist_palm_link/viz" mesh="wrist_palm_link_fine"/>
                                     <geom                   class="wam/col" mesh="wrist_palm_link_convex"/>
-                                    
+                                    <!-- Place imu sensors here. -->
+                                    <site name="imu_sensor_site_wam_wrist_palm_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
                                     
                                     <!-- [Optional] Intel Lidar Camera (*4) -->
                                     <body name="wam/camera" pos="0 0.085 0.02">
