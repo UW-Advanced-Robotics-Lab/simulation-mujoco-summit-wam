@@ -135,7 +135,7 @@
         <framequat name="global_quat_wam_shoulder_yaw" objtype="body" objname="wam/shoulder_yaw_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_shoulder_yaw" joint="wam/J1"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_shoulder_yaw" joint="wam/J1"/>
 
         <!-- Wam Shoulder Pitch link -->
@@ -151,7 +151,7 @@
         <framequat name="global_quat_wam_shoulder_pitch" objtype="body" objname="wam/shoulder_pitch_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_shoulder_pitch" joint="wam/J2"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_shoulder_pitch" joint="wam/J2"/>
 
         <!-- Wam Upper Arm link -->
@@ -167,7 +167,7 @@
         <framequat name="global_quat_wam_upper_arm" objtype="body" objname="wam/upper_arm_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_upper_arm" joint="wam/J3"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_upper_arm" joint="wam/J3"/>
 
         <!-- Wam Forearm link -->
@@ -183,7 +183,7 @@
         <framequat name="global_quat_wam_forearm" objtype="body" objname="wam/forearm_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_forearm" joint="wam/J4"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_forearm" joint="wam/J4"/>
 
         <!-- Wam Wrist Yaw link -->
@@ -199,7 +199,7 @@
         <framequat name="global_quat_wam_wrist_yaw" objtype="body" objname="wam/wrist_yaw_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_wrist_yaw" joint="wam/J5"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_yaw" joint="wam/J5"/>
 
         <!-- Wam Wrist Pitch link -->
@@ -215,7 +215,7 @@
         <framequat name="global_quat_wam_wrist_pitch" objtype="body" objname="wam/wrist_pitch_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_wrist_pitch" joint="wam/J6"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_pitch" joint="wam/J6"/>
 
         <!-- Wam Wrist Palm link -->
@@ -231,7 +231,7 @@
         <framequat name="global_quat_wam_wrist_palm" objtype="body" objname="wam/wrist_palm_link"/>
         <!-- Get joint position -->
         <jointpos name="joint_pos_wam_wrist_palm" joint="wam/J7"/>
-        <!-- Get joint-velocity position -->
+        <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_palm" joint="wam/J7"/>
 
         <!-- Inserted at the wrist: force and torque sensor -->
