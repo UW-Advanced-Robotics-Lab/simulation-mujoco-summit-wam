@@ -122,6 +122,18 @@
         <!-- Get MB gloabl-quaternion -->
         <framequat name="global_quat_mb" objtype="body" objname="smt/base_link"/>
 
+        <!-- Wam Base link -->
+        <!-- Get Linear acceleration in Wam Base link local-frame -->
+        <accelerometer name="accelerometer_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Linear velocity in Wam Base link local-frame -->
+        <velocimeter name="velocimeter_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Angular velocity in Wam Base link local-frame -->
+        <gyro name="gyroscope_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Wam Base link gloabl-position -->
+        <framepos name="global_pos_wam_base" objtype="body" objname="wam/base_link"/>
+        <!-- Get Wam Base link gloabl-quaternion -->
+        <framequat name="global_quat_wam_base" objtype="body" objname="wam/base_link"/>
+
         <!-- Wam Shoulder Yaw link -->
         <!-- Get Linear acceleration in Wam Shoulder Yaw link local-frame -->
         <accelerometer name="accelerometer_wam_shoulder_yaw" site="imu_sensor_site_wam_shoulder_yaw_link"/>
