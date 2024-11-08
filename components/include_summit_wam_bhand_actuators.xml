@@ -46,14 +46,14 @@
         <motor name='wam/J5/F' ctrllimited="true" joint='wam/J5' ctrlrange='-1.826 1.826' gear="9.48"     />
         <motor name='wam/J6/F' ctrllimited="true" joint='wam/J6' ctrlrange='-1.826 1.826' gear="9.48"     />
         <motor name='wam/J7/F' ctrllimited="true" joint='wam/J7' ctrlrange='-0.613 0.613' gear="14.93"   /> -->
-        <!-- 1.5x -->
-        <motor name='wam/J1/F' ctrllimited="true" joint='wam/J1' ctrlrange='-9.465 9.465' gear="42"      />
-        <motor name='wam/J2/F' ctrllimited="true" joint='wam/J2' ctrlrange='-9.465 9.465' gear="28.25"   />
-        <motor name='wam/J3/F' ctrllimited="true" joint='wam/J3' ctrlrange='-9.465 9.465' gear="28.25"   />
-        <motor name='wam/J4/F' ctrllimited="true" joint='wam/J4' ctrlrange='-9.465 9.465' gear="18"      />
-        <motor name='wam/J5/F' ctrllimited="true" joint='wam/J5' ctrlrange='-2.739 2.739' gear="9.48"     />
-        <motor name='wam/J6/F' ctrllimited="true" joint='wam/J6' ctrlrange='-2.739 2.739' gear="9.48"     />
-        <motor name='wam/J7/F' ctrllimited="true" joint='wam/J7' ctrlrange='-0.92 0.92' gear="14.93"   />
+        <!-- 2x -->
+        <motor name='wam/J1/F' ctrllimited="true" joint='wam/J1' ctrlrange='-12.62 12.62' gear="42"      />
+        <motor name='wam/J2/F' ctrllimited="true" joint='wam/J2' ctrlrange='-12.62 12.62' gear="28.25"   />
+        <motor name='wam/J3/F' ctrllimited="true" joint='wam/J3' ctrlrange='-12.62 12.62' gear="28.25"   />
+        <motor name='wam/J4/F' ctrllimited="true" joint='wam/J4' ctrlrange='-12.62 12.62' gear="18"      />
+        <motor name='wam/J5/F' ctrllimited="true" joint='wam/J5' ctrlrange='-3.652 3.652' gear="9.48"     />
+        <motor name='wam/J6/F' ctrllimited="true" joint='wam/J6' ctrlrange='-3.652 3.652' gear="9.48"     />
+        <motor name='wam/J7/F' ctrllimited="true" joint='wam/J7' ctrlrange='-1.226 1.226' gear="14.93"   />
     </actuator>
     
     <!-- [WAM BHAND BH8-280] 
