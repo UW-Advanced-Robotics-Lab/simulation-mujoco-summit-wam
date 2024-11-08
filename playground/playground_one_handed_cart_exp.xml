@@ -71,10 +71,10 @@
         </body>
 
         <!-- Environment -->
-        <body name="environment" pos="0 -2 0" euler="0 0 0">
+        <!-- <body name="environment" pos="0 -2 0" euler="0 0 0">
             <include file="../components/include_shelves.xml"/>
             <include file="../components/include_walls.xml"/>
-        </body>
+        </body> -->
         <!-- <body name="flexible_box" pos="0 0 1">
             <freejoint/>
             <composite type="box" count="7 7 7" spacing="0.04">
