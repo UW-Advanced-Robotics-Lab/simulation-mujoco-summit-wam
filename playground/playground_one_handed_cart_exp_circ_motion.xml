@@ -28,13 +28,6 @@
     <include file="../components/include_shelves_Dependencies.xml"/>
     <include file="../components/include_walls_Dependencies.xml"/>
 
-    <!--##################
-        ### Extension: ###
-        ################## -->
-    <extension>
-        <plugin plugin="mujoco.elasticity.solid"/>
-    </extension>
-
     <!--###############
         ### Config: ###
         ############### -->
@@ -50,9 +43,6 @@
         <!-- https://unsplash.com/photos/black-textile-on-brown-wooden-table-BUDn0s7QteI -->
         <texture name="concrete_floor" file="../components/texture/the-creativv-BUDn0s7QteI-unsplash.png" type="2d"/>
         <material name="floor" texture="concrete_floor" reflectance="0.05"/>
-        <!-- https://www.deviantart.com/ebonykate/art/Free-textures-23-85711516 -->
-        <texture name="blue_sponge" file="../components/texture/blue_sponge.png" type="2d"/>
-        <material name="blue_sponge" texture="blue_sponge" reflectance="0.05"/>
     </asset>
 
     <worldbody>
@@ -71,10 +61,10 @@
         </body>
 
         <!-- Environment -->
-        <body name="environment" pos="0 -2 0" euler="0 0 0">
+        <!-- <body name="environment" pos="0 -2 0" euler="0 0 0">
             <include file="../components/include_shelves.xml"/>
             <include file="../components/include_walls.xml"/>
-        </body>
+        </body> -->
     </worldbody>
 
     <!-- Defining a sensor -->
@@ -82,7 +72,145 @@
     <!-- Naming sensors -->
     <!-- https://github.com/openai/mujoco-py/issues/26#issuecomment-273637008 -->
     <sensor>
+        <!-- Mobile base -->
+        <!-- Get Linear acceleration in MB local-frame -->
+        <accelerometer name="accelerometer_mb" site="imu_sensor_site_mb"/>
+        <!-- Get Linear velocity in MB local-frame -->
+        <velocimeter name="velocimeter_mb" site="imu_sensor_site_mb"/>
+        <!-- Get Angular velocity in MB local-frame -->
+        <gyro name="gyroscope_mb" site="imu_sensor_site_mb"/>
+        <!-- Get MB gloabl-position -->
+        <!-- “body” refers to the inertial frame of the body, while “xbody” refers to the regular frame of the body (usually centered at the joint with the parent body) -->
+        <framepos name="global_pos_mb" objtype="xbody" objname="smt/base_link"/>
+        <!-- Get MB gloabl-quaternion -->
+        <framequat name="global_quat_mb" objtype="xbody" objname="smt/base_link"/>
+
+        <!-- Wam Base link -->
+        <!-- Get Linear acceleration in Wam Base link local-frame -->
+        <accelerometer name="accelerometer_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Linear velocity in Wam Base link local-frame -->
+        <velocimeter name="velocimeter_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Angular velocity in Wam Base link local-frame -->
+        <gyro name="gyroscope_wam_base" site="imu_sensor_site_wam_base_link"/>
+        <!-- Get Wam Base link gloabl-position -->
+        <framepos name="global_pos_wam_base" objtype="xbody" objname="wam/base_link"/>
+        <!-- Get Wam Base link gloabl-quaternion -->
+        <framequat name="global_quat_wam_base" objtype="xbody" objname="wam/base_link"/>
+
+        <!-- Wam Shoulder Yaw link -->
+        <!-- Get Linear acceleration in Wam Shoulder Yaw link local-frame -->
+        <accelerometer name="accelerometer_wam_shoulder_yaw" site="imu_sensor_site_wam_shoulder_yaw_link"/>
+        <!-- Get Linear velocity in Wam Shoulder Yaw link local-frame -->
+        <velocimeter name="velocimeter_wam_shoulder_yaw" site="imu_sensor_site_wam_shoulder_yaw_link"/>
+        <!-- Get Angular velocity in Wam Shoulder Yaw link local-frame -->
+        <gyro name="gyroscope_wam_shoulder_yaw" site="imu_sensor_site_wam_shoulder_yaw_link"/>
+        <!-- Get Wam Shoulder Yaw link gloabl-position -->
+        <framepos name="global_pos_wam_shoulder_yaw" objtype="xbody" objname="wam/shoulder_yaw_link"/>
+        <!-- Get Wam Shoulder Yaw link gloabl-quaternion -->
+        <framequat name="global_quat_wam_shoulder_yaw" objtype="xbody" objname="wam/shoulder_yaw_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_shoulder_yaw" joint="wam/J1"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_shoulder_yaw" joint="wam/J1"/>
+
+        <!-- Wam Shoulder Pitch link -->
+        <!-- Get Linear acceleration in Wam Shoulder Pitch link local-frame -->
+        <accelerometer name="accelerometer_wam_shoulder_pitch" site="imu_sensor_site_wam_shoulder_pitch_link"/>
+        <!-- Get Linear velocity in Wam Shoulder Pitch link local-frame -->
+        <velocimeter name="velocimeter_wam_shoulder_pitch" site="imu_sensor_site_wam_shoulder_pitch_link"/>
+        <!-- Get Angular velocity in Wam Shoulder Pitch link local-frame -->
+        <gyro name="gyroscope_wam_shoulder_pitch" site="imu_sensor_site_wam_shoulder_pitch_link"/>
+        <!-- Get Wam Shoulder Pitch link gloabl-position -->
+        <framepos name="global_pos_wam_shoulder_pitch" objtype="xbody" objname="wam/shoulder_pitch_link"/>
+        <!-- Get Wam Shoulder Pitch link gloabl-quaternion -->
+        <framequat name="global_quat_wam_shoulder_pitch" objtype="xbody" objname="wam/shoulder_pitch_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_shoulder_pitch" joint="wam/J2"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_shoulder_pitch" joint="wam/J2"/>
+
+        <!-- Wam Upper Arm link -->
+        <!-- Get Linear acceleration in Wam Upper Arm link local-frame -->
+        <accelerometer name="accelerometer_wam_upper_arm" site="imu_sensor_site_wam_upper_arm_link"/>
+        <!-- Get Linear velocity in Wam Upper Arm link local-frame -->
+        <velocimeter name="velocimeter_wam_upper_arm" site="imu_sensor_site_wam_upper_arm_link"/>
+        <!-- Get Angular velocity in Wam Upper Arm link local-frame -->
+        <gyro name="gyroscope_wam_upper_arm" site="imu_sensor_site_wam_upper_arm_link"/>
+        <!-- Get Wam Upper Arm link gloabl-position -->
+        <framepos name="global_pos_wam_upper_arm" objtype="xbody" objname="wam/upper_arm_link"/>
+        <!-- Get Wam Upper Arm link gloabl-quaternion -->
+        <framequat name="global_quat_wam_upper_arm" objtype="xbody" objname="wam/upper_arm_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_upper_arm" joint="wam/J3"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_upper_arm" joint="wam/J3"/>
+
+        <!-- Wam Forearm link -->
+        <!-- Get Linear acceleration in Wam Forearm link local-frame -->
+        <accelerometer name="accelerometer_wam_forearm" site="imu_sensor_site_wam_forearm_link"/>
+        <!-- Get Linear velocity in Wam Forearm link local-frame -->
+        <velocimeter name="velocimeter_wam_forearm" site="imu_sensor_site_wam_forearm_link"/>
+        <!-- Get Angular velocity in Wam Forearm link local-frame -->
+        <gyro name="gyroscope_wam_forearm" site="imu_sensor_site_wam_forearm_link"/>
+        <!-- Get Wam Forearm link gloabl-position -->
+        <framepos name="global_pos_wam_forearm" objtype="xbody" objname="wam/forearm_link"/>
+        <!-- Get Wam Forearm link gloabl-quaternion -->
+        <framequat name="global_quat_wam_forearm" objtype="xbody" objname="wam/forearm_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_forearm" joint="wam/J4"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_forearm" joint="wam/J4"/>
+
+        <!-- Wam Wrist Yaw link -->
+        <!-- Get Linear acceleration in Wam Wrist Yaw link local-frame -->
+        <accelerometer name="accelerometer_wam_wrist_yaw" site="imu_sensor_site_wam_wrist_yaw_link"/>
+        <!-- Get Linear velocity in Wam Wrist Yaw link local-frame -->
+        <velocimeter name="velocimeter_wam_wrist_yaw" site="imu_sensor_site_wam_wrist_yaw_link"/>
+        <!-- Get Angular velocity in Wam Wrist Yaw link local-frame -->
+        <gyro name="gyroscope_wam_wrist_yaw" site="imu_sensor_site_wam_wrist_yaw_link"/>
+        <!-- Get Wam Wrist Yaw link gloabl-position -->
+        <framepos name="global_pos_wam_wrist_yaw" objtype="xbody" objname="wam/wrist_yaw_link"/>
+        <!-- Get Wam Wrist Yaw link gloabl-quaternion -->
+        <framequat name="global_quat_wam_wrist_yaw" objtype="xbody" objname="wam/wrist_yaw_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_wrist_yaw" joint="wam/J5"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_wrist_yaw" joint="wam/J5"/>
+
+        <!-- Wam Wrist Pitch link -->
+        <!-- Get Linear acceleration in Wam Wrist Pitch link local-frame -->
+        <accelerometer name="accelerometer_wam_wrist_pitch" site="imu_sensor_site_wam_wrist_pitch_link"/>
+        <!-- Get Linear velocity in Wam Wrist Pitch link local-frame -->
+        <velocimeter name="velocimeter_wam_wrist_pitch" site="imu_sensor_site_wam_wrist_pitch_link"/>
+        <!-- Get Angular velocity in Wam Wrist Pitch link local-frame -->
+        <gyro name="gyroscope_wam_wrist_pitch" site="imu_sensor_site_wam_wrist_pitch_link"/>
+        <!-- Get Wam Wrist Pitch link gloabl-position -->
+        <framepos name="global_pos_wam_wrist_pitch" objtype="xbody" objname="wam/wrist_pitch_link"/>
+        <!-- Get Wam Wrist Pitch link gloabl-quaternion -->
+        <framequat name="global_quat_wam_wrist_pitch" objtype="xbody" objname="wam/wrist_pitch_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_wrist_pitch" joint="wam/J6"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_wrist_pitch" joint="wam/J6"/>
+
+        <!-- Wam Wrist Palm link -->
+        <!-- Get Linear acceleration in Wam Wrist Palm link local-frame -->
+        <accelerometer name="accelerometer_wam_wrist_palm" site="imu_sensor_site_wam_wrist_palm_link"/>
+        <!-- Get Linear velocity in Wam Wrist Palm link local-frame -->
+        <velocimeter name="velocimeter_wam_wrist_palm" site="imu_sensor_site_wam_wrist_palm_link"/>
+        <!-- Get Angular velocity in Wam Wrist Palm link local-frame -->
+        <gyro name="gyroscope_wam_wrist_palm" site="imu_sensor_site_wam_wrist_palm_link"/>
+        <!-- Get Wam Wrist Palm link gloabl-position -->
+        <framepos name="global_pos_wam_wrist_palm" objtype="xbody" objname="wam/wrist_palm_link"/>
+        <!-- Get Wam Wrist Palm link gloabl-quaternion -->
+        <framequat name="global_quat_wam_wrist_palm" objtype="xbody" objname="wam/wrist_palm_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_wam_wrist_palm" joint="wam/J7"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_wam_wrist_palm" joint="wam/J7"/>
+
         <!-- Inserted at the wrist: force and torque sensor -->
+        <!-- Get Force-Torque readings at the placed F/T-sensor in local-frame -->
         <force name="force_sensor" site="force_torque_sensor"/>
         <torque name="torque_sensor" site="force_torque_sensor"/>
     </sensor>
