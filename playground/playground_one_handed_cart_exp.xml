@@ -128,6 +128,8 @@
         <jointpos name="joint_pos_wam_shoulder_yaw" joint="wam/J1"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_shoulder_yaw" joint="wam/J1"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_shoulder_yaw" joint="wam/J1"/>
 
         <!-- Wam Shoulder Pitch link -->
         <!-- Get Linear acceleration in Wam Shoulder Pitch link local-frame -->
@@ -144,6 +146,8 @@
         <jointpos name="joint_pos_wam_shoulder_pitch" joint="wam/J2"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_shoulder_pitch" joint="wam/J2"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_shoulder_pitch" joint="wam/J2"/>
 
         <!-- Wam Upper Arm link -->
         <!-- Get Linear acceleration in Wam Upper Arm link local-frame -->
@@ -160,6 +164,8 @@
         <jointpos name="joint_pos_wam_upper_arm" joint="wam/J3"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_upper_arm" joint="wam/J3"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_upper_arm" joint="wam/J3"/>
 
         <!-- Wam Forearm link -->
         <!-- Get Linear acceleration in Wam Forearm link local-frame -->
@@ -176,6 +182,8 @@
         <jointpos name="joint_pos_wam_forearm" joint="wam/J4"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_forearm" joint="wam/J4"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_forearm" joint="wam/J4"/>
 
         <!-- Wam Wrist Yaw link -->
         <!-- Get Linear acceleration in Wam Wrist Yaw link local-frame -->
@@ -192,6 +200,8 @@
         <jointpos name="joint_pos_wam_wrist_yaw" joint="wam/J5"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_yaw" joint="wam/J5"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_wrist_yaw" joint="wam/J5"/>
 
         <!-- Wam Wrist Pitch link -->
         <!-- Get Linear acceleration in Wam Wrist Pitch link local-frame -->
@@ -208,6 +218,8 @@
         <jointpos name="joint_pos_wam_wrist_pitch" joint="wam/J6"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_pitch" joint="wam/J6"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_wrist_pitch" joint="wam/J6"/>
 
         <!-- Wam Wrist Palm link -->
         <!-- Get Linear acceleration in Wam Wrist Palm link local-frame -->
@@ -224,6 +236,8 @@
         <jointpos name="joint_pos_wam_wrist_palm" joint="wam/J7"/>
         <!-- Get joint velocity -->
         <jointvel name="joint_vel_wam_wrist_palm" joint="wam/J7"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_wam_wrist_palm" joint="wam/J7"/>
 
         <!-- Inserted at the wrist: force and torque sensor -->
         <!-- Get Force-Torque readings at the placed F/T-sensor in local-frame -->
