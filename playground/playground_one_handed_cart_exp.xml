@@ -243,6 +243,164 @@
         <!-- Get Force-Torque readings at the placed F/T-sensor in local-frame -->
         <force name="force_sensor" site="force_torque_sensor"/>
         <torque name="torque_sensor" site="force_torque_sensor"/>
+
+        <!-- BHand -->
+        <!-- BHand Palm Link -->
+        <!-- Get Linear acceleration in BHand Palm link local-frame -->
+        <accelerometer name="accelerometer_bhand_palm" site="imu_sensor_site_bhand_palm_link"/>
+        <!-- Get Linear velocity in BHand Palm link local-frame -->
+        <velocimeter name="velocimeter_bhand_palm" site="imu_sensor_site_bhand_palm_link"/>
+        <!-- Get Angular velocity in BHand Palm link local-frame -->
+        <gyro name="gyroscope_bhand_palm" site="imu_sensor_site_bhand_palm_link"/>
+        <!-- Get BHand Palm link gloabl-position -->
+        <framepos name="global_pos_bhand_palm" objtype="xbody" objname="wam/bhand/bhand_palm_link"/>
+        <!-- Get BHand Palm link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_palm" objtype="xbody" objname="wam/bhand/bhand_palm_link"/>
+
+        <!-- BHand Finger 1 Prox Link -->
+        <!-- Get Linear acceleration in BHand Finger 1 Prox link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_1_prox" site="imu_sensor_site_bhand_finger_1_prox_link"/>
+        <!-- Get Linear velocity in BHand Finger 1 Prox link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_1_prox" site="imu_sensor_site_bhand_finger_1_prox_link"/>
+        <!-- Get Angular velocity in BHand Finger 1 Prox link local-frame -->
+        <gyro name="gyroscope_bhand_finger_1_prox" site="imu_sensor_site_bhand_finger_1_prox_link"/>
+        <!-- Get BHand Finger 1 Prox link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_1_prox" objtype="xbody" objname="wam/bhand/finger_1/prox_link"/>
+        <!-- Get BHand Finger 1 Prox link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_1_prox" objtype="xbody" objname="wam/bhand/finger_1/prox_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_1_prox" joint="bhand/f1/prox"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_1_prox" joint="bhand/f1/prox"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_1_prox" joint="bhand/f1/prox"/>
+
+        <!-- BHand Finger 1 Med Link -->
+        <!-- Get Linear acceleration in BHand Finger 1 Med link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_1_med" site="imu_sensor_site_bhand_finger_1_med_link"/>
+        <!-- Get Linear velocity in BHand Finger 1 Med link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_1_med" site="imu_sensor_site_bhand_finger_1_med_link"/>
+        <!-- Get Angular velocity in BHand Finger 1 Med link local-frame -->
+        <gyro name="gyroscope_bhand_finger_1_med" site="imu_sensor_site_bhand_finger_1_med_link"/>
+        <!-- Get BHand Finger 1 Med link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_1_med" objtype="xbody" objname="wam/bhand/finger_1/med_link"/>
+        <!-- Get BHand Finger 1 Med link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_1_med" objtype="xbody" objname="wam/bhand/finger_1/med_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_1_med" joint="bhand/f1/med"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_1_med" joint="bhand/f1/med"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_1_med" joint="bhand/f1/med"/>
+
+        <!-- BHand Finger 1 Dist Link -->
+        <!-- Get Linear acceleration in BHand Finger 1 Dist link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_1_dist" site="imu_sensor_site_bhand_finger_1_dist_link"/>
+        <!-- Get Linear velocity in BHand Finger 1 Dist link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_1_dist" site="imu_sensor_site_bhand_finger_1_dist_link"/>
+        <!-- Get Angular velocity in BHand Finger 1 Dist link local-frame -->
+        <gyro name="gyroscope_bhand_finger_1_dist" site="imu_sensor_site_bhand_finger_1_dist_link"/>
+        <!-- Get BHand Finger 1 Dist link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_1_dist" objtype="xbody" objname="wam/bhand/finger_1/dist_link"/>
+        <!-- Get BHand Finger 1 Dist link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_1_dist" objtype="xbody" objname="wam/bhand/finger_1/dist_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_1_dist" joint="bhand/f1/dist"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_1_dist" joint="bhand/f1/dist"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_1_dist" joint="bhand/f1/dist"/>
+
+        <!-- BHand Finger 2 Prox Link -->
+        <!-- Get Linear acceleration in BHand Finger 2 Prox link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_2_prox" site="imu_sensor_site_bhand_finger_2_prox_link"/>
+        <!-- Get Linear velocity in BHand Finger 2 Prox link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_2_prox" site="imu_sensor_site_bhand_finger_2_prox_link"/>
+        <!-- Get Angular velocity in BHand Finger 2 Prox link local-frame -->
+        <gyro name="gyroscope_bhand_finger_2_prox" site="imu_sensor_site_bhand_finger_2_prox_link"/>
+        <!-- Get BHand Finger 2 Prox link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_2_prox" objtype="xbody" objname="wam/bhand/finger_2/prox_link"/>
+        <!-- Get BHand Finger 2 Prox link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_2_prox" objtype="xbody" objname="wam/bhand/finger_2/prox_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_2_prox" joint="bhand/f2/prox"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_2_prox" joint="bhand/f2/prox"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_2_prox" joint="bhand/f2/prox"/>
+
+        <!-- BHand Finger 2 Med Link -->
+        <!-- Get Linear acceleration in BHand Finger 2 Med link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_2_med" site="imu_sensor_site_bhand_finger_2_med_link"/>
+        <!-- Get Linear velocity in BHand Finger 2 Med link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_2_med" site="imu_sensor_site_bhand_finger_2_med_link"/>
+        <!-- Get Angular velocity in BHand Finger 2 Med link local-frame -->
+        <gyro name="gyroscope_bhand_finger_2_med" site="imu_sensor_site_bhand_finger_2_med_link"/>
+        <!-- Get BHand Finger 2 Med link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_2_med" objtype="xbody" objname="wam/bhand/finger_2/med_link"/>
+        <!-- Get BHand Finger 2 Med link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_2_med" objtype="xbody" objname="wam/bhand/finger_2/med_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_2_med" joint="bhand/f2/med"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_2_med" joint="bhand/f2/med"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_2_med" joint="bhand/f2/med"/>
+
+        <!-- BHand Finger 2 Dist Link -->
+        <!-- Get Linear acceleration in BHand Finger 2 Dist link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_2_dist" site="imu_sensor_site_bhand_finger_2_dist_link"/>
+        <!-- Get Linear velocity in BHand Finger 2 Dist link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_2_dist" site="imu_sensor_site_bhand_finger_2_dist_link"/>
+        <!-- Get Angular velocity in BHand Finger 2 Dist link local-frame -->
+        <gyro name="gyroscope_bhand_finger_2_dist" site="imu_sensor_site_bhand_finger_2_dist_link"/>
+        <!-- Get BHand Finger 2 Dist link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_2_dist" objtype="xbody" objname="wam/bhand/finger_2/dist_link"/>
+        <!-- Get BHand Finger 2 Dist link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_2_dist" objtype="xbody" objname="wam/bhand/finger_2/dist_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_2_dist" joint="bhand/f2/dist"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_2_dist" joint="bhand/f2/dist"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_2_dist" joint="bhand/f2/dist"/>
+
+        <!-- BHand Finger 3 Med Link -->
+        <!-- Get Linear acceleration in BHand Finger 3 Med link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_3_med" site="imu_sensor_site_bhand_finger_3_med_link"/>
+        <!-- Get Linear velocity in BHand Finger 3 Med link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_3_med" site="imu_sensor_site_bhand_finger_3_med_link"/>
+        <!-- Get Angular velocity in BHand Finger 3 Med link local-frame -->
+        <gyro name="gyroscope_bhand_finger_3_med" site="imu_sensor_site_bhand_finger_3_med_link"/>
+        <!-- Get BHand Finger 3 Med link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_3_med" objtype="xbody" objname="wam/bhand/finger_3/med_link"/>
+        <!-- Get BHand Finger 3 Med link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_3_med" objtype="xbody" objname="wam/bhand/finger_3/med_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_3_med" joint="bhand/f3/med"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_3_med" joint="bhand/f3/med"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_3_med" joint="bhand/f3/med"/>
+
+        <!-- BHand Finger 3 Dist Link -->
+        <!-- Get Linear acceleration in BHand Finger 3 Dist link local-frame -->
+        <accelerometer name="accelerometer_bhand_finger_3_dist" site="imu_sensor_site_bhand_finger_3_dist_link"/>
+        <!-- Get Linear velocity in BHand Finger 3 Dist link local-frame -->
+        <velocimeter name="velocimeter_bhand_finger_3_dist" site="imu_sensor_site_bhand_finger_3_dist_link"/>
+        <!-- Get Angular velocity in BHand Finger 3 Dist link local-frame -->
+        <gyro name="gyroscope_bhand_finger_3_dist" site="imu_sensor_site_bhand_finger_3_dist_link"/>
+        <!-- Get BHand Finger 3 Dist link gloabl-position -->
+        <framepos name="global_pos_bhand_finger_3_dist" objtype="xbody" objname="wam/bhand/finger_3/dist_link"/>
+        <!-- Get BHand Finger 3 Dist link gloabl-quaternion -->
+        <framequat name="global_quat_bhand_finger_3_dist" objtype="xbody" objname="wam/bhand/finger_3/dist_link"/>
+        <!-- Get joint position -->
+        <jointpos name="joint_pos_bhand_finger_3_dist" joint="bhand/f3/dist"/>
+        <!-- Get joint velocity -->
+        <jointvel name="joint_vel_bhand_finger_3_dist" joint="bhand/f3/dist"/>
+        <!-- Get Joint effort -->
+        <jointactuatorfrc name="joint_effort_bhand_finger_3_dist" joint="bhand/f3/dist"/>
+
     </sensor>
     <!-- Palm and horizontal-bar pairs -->
     <contact>
