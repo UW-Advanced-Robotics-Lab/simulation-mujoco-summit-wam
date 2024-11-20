@@ -110,6 +110,13 @@
         <exclude body1="wam/base" body2="wam/shoulder_yaw_link"/>
         <exclude body1="wam/shoulder_yaw_link" body2="wam/upper_arm_link"/>
         <exclude body1="wam/forearm_link" body2="wam/wrist_pitch_link"/>
+        <exclude body1="wam/shoulder_yaw_link" body2="wam/shoulder_pitch_link"/>
+        <exclude body1="wam/shoulder_pitch_link" body2="wam/upper_arm_link"/>
+        <exclude body1="wam/upper_arm_link" body2="wam/shoulder_yaw_link"/>
+        <exclude body1="wam/upper_arm_link" body2="wam/forearm_link"/>
+        <exclude body1="wam/forearm_link" body2="wam/wrist_yaw_link"/>
+        <exclude body1="wam/wrist_yaw_link" body2="wam/wrist_pitch_link"/>
+        <exclude body1="wam/wrist_pitch_link" body2="wam/wrist_palm_link"/>
     </contact>
 
 </mujocoinclude>
