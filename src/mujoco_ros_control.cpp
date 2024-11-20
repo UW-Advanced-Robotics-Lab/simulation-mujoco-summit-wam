@@ -250,8 +250,8 @@ int main(int argc, char** argv)
     std::map<std::string, std::vector<double> > list_mj_data;
 
     // ROS_INFO("Subscribing to joint_states");
-
-    ros::Subscriber listener_mujoco = nh_.subscribe("/mujoco/joint_states", 1, &mujoco_ros_control::MujocoRosControl::readCallback_mujoco, &mujoco_ros_control_1);
+    // To ensure that the call-back is called as soon as data is made available, follow this: https://answers.ros.org/question/222074/joint_states-topic-and-publish-rate/
+    ros::Subscriber listener_mujoco = nh_.subscribe("/mujoco/joint_states", 1, &mujoco_ros_control::MujocoRosControl::readCallback_mujoco, &mujoco_ros_control_1, ros::TransportHints().tcpNoDelay());
 
     ROS_INFO("Subscribed to joint_states");
 
