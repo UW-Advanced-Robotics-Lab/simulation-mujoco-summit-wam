@@ -404,22 +404,24 @@
     </sensor>
     <!-- Palm and horizontal-bar pairs -->
     <contact>
-        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p1/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p2/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p3/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p4/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p1/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p2/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p3/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_med_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_dist_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p1/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p2/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p3/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_med_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_dist_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_3_med_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
-        <pair geom1="cylinder_0/col" geom2="bhand_finger_3_dist_link_p0/col" condim="3" solref="0.01 1" solimp=".95 .99 .0001"/>
+    <!-- https://mujoco.readthedocs.io/en/stable/modeling.html#reference -->
+    <!-- Larger time-constant should lead to slower acceleration when trying to push a penetrated object out of another. (0.02 to 3.2)-->
+        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p1/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p2/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p3/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_palm_link_p4/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p1/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p2/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_prox_link_p3/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_med_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_1_dist_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p1/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p2/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_prox_link_p3/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_med_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_2_dist_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_3_med_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
+        <pair geom1="cylinder_0/col" geom2="bhand_finger_3_dist_link_p0/col" condim="3" solref="3 0.5" solimp=".45 .6 .01 0.9 2"/>
     </contact>
     
 </mujoco>
