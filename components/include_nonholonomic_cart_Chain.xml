@@ -20,7 +20,10 @@
                                                         diaginertia="0.429806029970904 0.763879115003351 1.19151294778136" />
         <geom name="cart/viz/base_link"                 class="cart/body/viz" mesh="base_link"/>
 
-        <site name="imu_sensor_site_cart_base_link" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+        <!-- Place two IMUs to get-back yaw angular-acceleration -->
+        <site name="imu_sensor_site_1_cart_base_link" pos="0.263991 0.111546 0" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+        <!-- Keeping the 2nd IMU-sensor 0.1 m away from the first. This value is used `state_pub_mujoco.py` when calculating the yaw angular-acceleration -->
+        <site name="imu_sensor_site_2_cart_base_link" pos="0.263991 0.211546 0" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
 
         <!-- Simplified the collision into boxes -->
         <geom name="cart/col/base_link/box_body"        class="cart/col" mesh="base_link"/>

@@ -402,15 +402,19 @@
         <jointactuatorfrc name="joint_effort_bhand_finger_3_dist" joint="bhand/f3/dist"/>
 
         <!-- Cart base -->
+        <!-- Get Linear acceleration in Cart local-frame -->
+        <!-- Place two IMUs to get-back yaw angular-acceleration -->
+        <accelerometer name="accelerometer_1_cart" site="imu_sensor_site_1_cart_base_link"/>
+        <accelerometer name="accelerometer_2_cart" site="imu_sensor_site_2_cart_base_link"/>
         <!-- Get Linear velocity in Cart local-frame -->
-        <velocimeter name="velocimeter_cart" site="imu_sensor_site_cart_base_link"/>
+        <velocimeter name="velocimeter_cart" site="imu_sensor_site_1_cart_base_link"/>
         <!-- Get Angular velocity in Cart local-frame -->
-        <gyro name="gyroscope_cart" site="imu_sensor_site_cart_base_link"/>
+        <gyro name="gyroscope_cart" site="imu_sensor_site_1_cart_base_link"/>
         <!-- Get Cart gloabl-position -->
         <!-- “body” refers to the inertial frame of the body, while “xbody” refers to the regular frame of the body (usually centered at the joint with the parent body) -->
-        <framepos name="global_pos_cart" objtype="xbody" objname="cart/base_link"/>
+        <framepos name="global_pos_cart" objtype="site" objname="imu_sensor_site_1_cart_base_link"/>
         <!-- Get Cart gloabl-quaternion -->
-        <framequat name="global_quat_cart" objtype="xbody" objname="cart/base_link"/>
+        <framequat name="global_quat_cart" objtype="site" objname="imu_sensor_site_1_cart_base_link"/>
 
     </sensor>
     <!-- Palm and horizontal-bar pairs -->
