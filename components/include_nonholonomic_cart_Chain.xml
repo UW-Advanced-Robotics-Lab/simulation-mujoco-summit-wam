@@ -16,7 +16,7 @@
     <body name="cart/base_link" pos="0 0 0">
         <!-- === BASE LINK === === === === -->
         <!-- mobile body -->
-        <inertial                                       pos="-0.0987869701644406 0.111546221439391 0.0189782111673935" mass="3.62" 
+        <inertial                                       pos="-0.0987869701644406 0.111546221439391 0.0189782111673935" mass="30.62" 
                                                         diaginertia="0.10745 0.19097 0.29788" />
         <geom name="cart/viz/base_link"                 class="cart/body/viz" mesh="base_link"/>
 
@@ -29,9 +29,9 @@
         <geom name="cart/col/base_link/box_body"        class="cart/col" mesh="base_link"/>
 
         <!-- world placement -->
-        <joint name="cart/slide/world_x" armature="0.0001" axis="1 0 0" damping="1e+11" pos="0.233991199548651 0.11154622143 0" type="slide"></joint>
-        <!-- <joint name="cart/slide/world_y" armature="0.0001" axis="0 1 0" damping="1e+11" pos="0 0 0" type="slide"></joint> -->
-        <joint name="cart/hinge/world_z" armature="0.0001" axis="0 0 1" damping="1e+0"  pos="0.233991199548651 0.11154622143 0" type="hinge"></joint>
+        <joint name="cart/slide/world_x" armature="0.0001" axis="1 0 0" damping="0.1" pos="0.233991199548651 0.11154622143 0" type="slide"></joint>
+        <joint name="cart/slide/world_y" armature="0.0001" axis="0 1 0" damping="1e+11" pos="0.233991199548651 0.11154622143 0" type="slide"></joint>
+        <joint name="cart/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.1"  pos="0.233991199548651 0.11154622143 0" type="hinge"></joint>
 
         <!-- === hub LINK === === === === -->
         <!-- Front Left Hub -->
