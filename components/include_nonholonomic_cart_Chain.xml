@@ -16,8 +16,8 @@
     <body name="cart/base_link" pos="0 0 0">
         <!-- === BASE LINK === === === === -->
         <!-- mobile body -->
-        <inertial                                       pos="-0.0987869701644406 0.111546221439391 0.0189782111673935" mass="14.4813146193203" 
-                                                        diaginertia="0.429806029970904 0.763879115003351 1.19151294778136" />
+        <inertial                                       pos="-0.0987869701644406 0.111546221439391 0.0189782111673935" mass="3.62" 
+                                                        diaginertia="0.10745 0.19097 0.29788" />
         <geom name="cart/viz/base_link"                 class="cart/body/viz" mesh="base_link"/>
 
         <!-- Place two IMUs to get-back yaw angular-acceleration -->
@@ -37,13 +37,13 @@
         <!-- Front Left Hub -->
         <body name="cart/swivel_hub/L_link" pos="-0.376008800451349 -0.128453778560609 0" quat="0 0 0.7071068 0.7071068">
             <geom name="cart/viz/L_swivel_hub"          class="cart/hub/viz" mesh="front_hub_link"/>
-            <inertial                                   pos="-0.0299630112338933 -0.0291453924306544 0" mass="0.2995165479443" diaginertia="0.000534882003539849 0.000441430832048048 0.000505305636255134"/>
+            <inertial                                   pos="-0.0299630112338933 -0.0291453924306544 0" mass="0.074879" diaginertia="0.00013372 0.00011036 0.00012633"/>
             <!-- <joint name="cart/L_swivel_hub"             class="cart/swivel_hub" pos="0 0 0"/> -->
             <!-- Front Left Wheel -->
             <body name="cart/whl/FL_link" pos="-0.05 -0.0880217888326065 0" quat="0 0.7071068 0 0.7071068">
                 <geom name="cart/viz/FL_whl"            class="cart/whl/viz" mesh="wheel_link"/>
-                <geom name="cart/col/FL_whl"            class="cart/whl/col"/>
-                <inertial                               pos="0 0 0" mass="0.786123781911533" diaginertia="0.00249483449278092 0.0013482783029798 0.0013482783029798"/>
+                <geom name="cart/col/FL_whl"            class="cart/whl/col" friction="0.1 0.005 0.0001"/>
+                <inertial                               pos="0 0 0" mass="0.19653" diaginertia="0.00062371 0.00033707 0.00033707"/>
                 <!-- <joint name="cart/FL_whl"               class="cart/whl" pos="0 0 0"/> -->
             </body>
         </body>
@@ -51,13 +51,13 @@
         <!-- Front Right Hub -->
         <body name="cart/swivel_hub/R_link" pos="-0.376008800451349 0.351546221439391 0" quat="0 0 0.7071068 0.7071068">
             <geom name="cart/viz/R_swivel_hub"          class="cart/hub/viz" mesh="front_hub_link"/>
-            <inertial                                   pos="-0.0299630112338933 -0.0291453924306544 0" mass="0.2995165479443" diaginertia="0.000534882003539849 0.000441430832048048 0.000505305636255134"/>
+            <inertial                                   pos="-0.0299630112338933 -0.0291453924306544 0" mass="0.074879" diaginertia="0.00013372 0.00011036 0.00012633"/>
             <!-- <joint name="cart/R_swivel_hub"             class="cart/swivel_hub" pos="0 0 0"/> -->
             <!-- Front Left Wheel -->
             <body name="cart/whl/FR_link" pos="-0.05 -0.0880217888326065 0" quat="0 0.7071068 0 0.7071068">
                 <geom name="cart/viz/FR_whl"            class="cart/whl/viz" mesh="wheel_link"/>
-                <geom name="cart/col/FR_whl"            class="cart/whl/col"/>
-                <inertial                               pos="0 0 0" mass="0.786123781911533" diaginertia="0.00249483449278092 0.0013482783029798 0.0013482783029798"/>
+                <geom name="cart/col/FR_whl"            class="cart/whl/col" friction="0.1 0.005 0.0001"/>
+                <inertial                               pos="0 0 0" mass="0.19653" diaginertia="0.00062371 0.00033707 0.00033707"/>
                 <!-- <joint name="cart/FR_whl"               class="cart/whl" pos="0 0 0"/> -->
             </body>
         </body>
@@ -65,12 +65,12 @@
         <!-- Rear Left Hub -->
         <body name="cart/static_hub/L_link" pos="0.233991199548651 -0.128453778560609 -0.108021788832606" quat="0 0 0.7071068 0.7071068">
             <geom name="cart/viz/L_static_hub"          class="cart/hub/viz" mesh="rear_hub_link"/>
-            <inertial                                   pos="0.0408028663277845 0.0776485299054857 0" mass="0.2884895577302" diaginertia="0.000522444079735276 0.000435593950616376 0.000488271367417975"/>
+            <inertial                                   pos="0.0408028663277845 0.0776485299054857 0" mass="0.072122" diaginertia="0.00013061 0.0001089 0.00012207"/>
             <!-- Rear Left Wheel -->
             <body name="cart/whl/RL_link" pos="0.02 0.02 0" quat="0 0.7071068 0 0.7071068">
                 <geom name="cart/viz/RL_whl"            class="cart/whl/viz" mesh="wheel_link"/>
-                <geom name="cart/col/RL_whl"            class="cart/whl/col"/>
-                <inertial                               pos="0 0 0" mass="0.786123781911533" diaginertia="0.00249483449278092 0.0013482783029798 0.0013482783029798"/>
+                <geom name="cart/col/RL_whl"            class="cart/whl/col" friction="0.1 0.005 0.0001"/>
+                <inertial                               pos="0 0 0" mass="0.19653" diaginertia="0.00062371 0.00033707 0.00033707"/>
                 <!-- <joint name="cart/RL_whl"               class="cart/whl" pos="0 0 0"/> -->
             </body>
         </body>
@@ -78,12 +78,12 @@
         <!-- Rear Right Hub -->
         <body name="cart/static_hub/R_link" pos="0.233991199548651 0.351546221439391 -0.108021788832607" quat="0 0 0.7071068 0.7071068">
             <geom name="cart/viz/R_static_hub"          class="cart/hub/viz" mesh="rear_hub_link"/>
-            <inertial                                   pos="0.0408028663277845 0.0776485299054857 0" mass="0.2884895577302" diaginertia="0.000522444079735276 0.000435593950616376 0.000488271367417975"/>
+            <inertial                                   pos="0.0408028663277845 0.0776485299054857 0" mass="0.072122" diaginertia="0.00013061 0.0001089 0.00012207"/>
             <!-- Rear Right Wheel -->
             <body name="cart/whl/RR_link" pos="0.02 0.02 0" quat="0 0.7071068 0 0.7071068">
                 <geom name="cart/viz/RR_whl"            class="cart/whl/viz" mesh="wheel_link"/>
-                <geom name="cart/col/RR_whl"            class="cart/whl/col"/>
-                <inertial                               pos="0 0 0" mass="0.786123781911533" diaginertia="0.00249483449278092 0.0013482783029798 0.0013482783029798"/>
+                <geom name="cart/col/RR_whl"            class="cart/whl/col" friction="0.1 0.005 0.0001"/>
+                <inertial                               pos="0 0 0" mass="0.19653" diaginertia="0.00062371 0.00033707 0.00033707"/>
                 <!-- <joint name="cart/RR_whl"               class="cart/whl" pos="0 0 0"/> -->
             </body>
         </body>
