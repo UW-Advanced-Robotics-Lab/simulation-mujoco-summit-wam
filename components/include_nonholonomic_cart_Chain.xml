@@ -21,17 +21,18 @@
         <geom name="cart/viz/base_link"                 class="cart/body/viz" mesh="base_link"/>
 
         <!-- Place two IMUs to get-back yaw angular-acceleration -->
-        <site name="imu_sensor_site_1_cart_base_link" pos="0.263991 0.111546 0" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+        <site name="imu_sensor_site_1_cart_base_link" pos="0.213991199548651 0.11154622143 0" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
         <!-- Keeping the 2nd IMU-sensor 0.1 m away from the first. This value is used `state_pub_mujoco.py` when calculating the yaw angular-acceleration -->
-        <site name="imu_sensor_site_2_cart_base_link" pos="0.263991 0.211546 0" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
+        <site name="imu_sensor_site_2_cart_base_link" pos="0.213991199548651 0.21154622143 0" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
 
         <!-- Simplified the collision into boxes -->
         <geom name="cart/col/base_link/box_body"        class="cart/col" mesh="base_link"/>
 
         <!-- world placement -->
-        <joint name="cart/slide/world_x" armature="0.0001" axis="1 0 0" damping="0.1" pos="0.233991199548651 0.11154622143 0" type="slide"></joint>
-        <!-- <joint name="cart/slide/world_y" armature="0.0001" axis="0 1 0" damping="1e+11" pos="0.233991199548651 0.11154622143 0" type="slide"></joint> -->
-        <joint name="cart/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.1"  pos="0.233991199548651 0.11154622143 0" type="hinge"></joint>
+        <joint name="cart/slide/world_x" armature="0.0001" axis="1 0 0" damping="0" pos="0.213991199548651 0.11154622143 0" type="slide"></joint>
+        <joint name="cart/slide/world_y" armature="0.0001" axis="0 1 0" damping="0" pos="0.213991199548651 0.11154622143 0" type="slide"></joint>
+        <joint name="cart/slide/world_z" armature="0.0001" axis="0 0 1" damping="0" pos="0.213991199548651 0.11154622143 0" type="slide"></joint>
+        <joint name="cart/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0"  pos="0.213991199548651 0.11154622143 0" type="hinge"></joint>
 
         <!-- === hub LINK === === === === -->
         <!-- Front Left Hub -->
