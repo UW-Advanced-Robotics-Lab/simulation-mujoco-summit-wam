@@ -30,10 +30,10 @@
         <default class="cart">
         </default>
         <default class="cart/swivel_hub">
-            <joint axis="0 0 1" damping="0.05"/>
+            <joint axis="0 1 0" damping="0.01" limited="false"/>
         </default>
         <default class="cart/whl">
-            <joint axis="1 0 0" damping="0.05"/>
+            <joint axis="1 0 0" damping="0.01" limited="false"/>
         </default>
         <default class="cart/col">
             <geom type="mesh" contype="1" conaffinity="1" group="0" rgba="0.5 0.6 0.7 0.7"/>          
@@ -55,6 +55,16 @@
         </default>
         
     </default>
+
+    <!-- CONTACT -->
+    <contact>
+        <exclude body1="cart/base_link" body2="cart/swivel_hub/L_link"/>
+        <exclude body1="cart/base_link" body2="cart/swivel_hub/R_link"/>
+        <exclude body1="cart/swivel_hub/L_link" body2="cart/whl/FL_link"/>
+        <exclude body1="cart/swivel_hub/R_link" body2="cart/whl/FR_link"/>
+        <exclude body1="cart/static_hub/L_link" body2="cart/whl/RL_link"/>
+        <exclude body1="cart/static_hub/R_link" body2="cart/whl/RR_link"/>
+    </contact>
 
 </mujocoinclude>
 
