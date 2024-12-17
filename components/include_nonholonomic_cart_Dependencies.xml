@@ -30,10 +30,10 @@
         <default class="cart">
         </default>
         <default class="cart/swivel_hub">
-            <joint axis="0 1 0" damping="0.01" limited="false"/>
+            <joint axis="0 1 0" damping="0.0001" limited="false"/>
         </default>
         <default class="cart/whl">
-            <joint axis="1 0 0" damping="0.01" limited="false"/>
+            <joint axis="1 0 0" damping="0.0001" limited="false"/>
         </default>
         <default class="cart/col">
             <geom type="mesh" contype="1" conaffinity="1" group="0" rgba="0.5 0.6 0.7 0.7"/>          
