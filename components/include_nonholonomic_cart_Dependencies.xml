@@ -38,7 +38,7 @@
         <default class="cart/col">
             <geom type="mesh" contype="1" conaffinity="1" group="0" rgba="0.5 0.6 0.7 0.7"/>          
             <default class="cart/whl/col">
-                <geom pos="0 0 0" quat="0.707107 0 0.707106 0" size="0.08 0.04" type="cylinder"/>
+                <geom pos="0 0 0" quat="0.707107 0 0.707106 0" size="0.08 0.01" type="cylinder"/>
             </default>
         </default>
         <default class="cart/body/viz">
