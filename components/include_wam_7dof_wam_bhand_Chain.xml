@@ -68,7 +68,7 @@
                     - frame correction to the stl: <x, z, -y>
             -->
             <inertial               pos="-0.00443422 -0.00066489 -0.12189039" mass="10.76768767" fullinertia="0.13488033 0.09046330 0.11328369 -0.00012485 0.00213041 -0.00068555" />
-            <joint name="wam/J1"    range="-2.6 2.6" damping="20" frictionloss="4" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
+            <joint name="wam/J1"    range="-2.6 2.6" damping="60" frictionloss="4" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
             <geom                   class="wam/shoulder_yaw_link/viz" mesh="shoulder_link_fine"/>
             <geom                   class="wam/col" mesh="shoulder_link_convex_decomposition_p1"/>
             <geom                   class="wam/col" mesh="shoulder_link_convex_decomposition_p2"/>
@@ -83,7 +83,7 @@
                 -->
                 <!-- <body name="wam/shoulder_pitch_link" pos="0 0 0"> -->
                 <inertial               pos="-0.00236983 -0.01542114 0.03105614" mass="3.8749" fullinertia="0.02140958 0.01558906 0.01377875 -0.00002461 0.00027172 0.00181920" />
-                <joint name="wam/J2"    range="-1.9 1.9" damping="200" frictionloss="90" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
+                <joint name="wam/J2"    range="-1.9 1.9" damping="100" frictionloss="3" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
                 <geom                   class="wam/shoulder_pitch_link/viz" mesh="shoulder_pitch_link_fine"/>
                 <geom                   class="wam/col" mesh="shoulder_pitch_link_convex"/>
                 <!-- Place imu sensors here. -->
@@ -98,7 +98,7 @@
                     -->
                     <!-- <body name="wam/upper_arm_link" pos="0 0 0"> -->
                     <inertial               pos="0.00674142 -0.00003309 0.3424923" mass="1.8028141" fullinertia="0.05911077 0.05927043 0.00324550 -0.00000738 0.00249612 -0.00001767" />
-                    <joint name="wam/J3"    range="-2.8 2.8" damping="300" frictionloss="10" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
+                    <joint name="wam/J3"    range="-2.8 2.8" damping="200" frictionloss="2" type="hinge" limited="true" pos="0 0 0" axis="0 0 1"/>
                     <geom                   class="wam/upper_arm_link/viz" mesh="upper_arm_link_fine"/>
                     <geom                   class="wam/col" mesh="upper_arm_link_convex_decomposition_p1"/>
                     <geom                   class="wam/col" mesh="upper_arm_link_convex_decomposition_p2"/>
