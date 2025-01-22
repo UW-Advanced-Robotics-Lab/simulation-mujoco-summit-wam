@@ -21,6 +21,7 @@
         <geom name="cart/viz/base_link"                 class="cart/body/viz" mesh="base_link"/>
 
         <!-- Place two IMUs to get-back yaw angular-acceleration -->
+        <!-- 0.233991199548651 (wheel mount origin) - 0.02 (wheel center origin) -->
         <site name="imu_sensor_site_1_cart_base_link" pos="0.213991199548651 0.11154622143 0" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
         <!-- Keeping the 2nd IMU-sensor 0.1 m away from the first. This value is used `state_pub_mujoco.py` when calculating the yaw angular-acceleration -->
         <site name="imu_sensor_site_2_cart_base_link" pos="0.213991199548651 0.21154622143 0" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
