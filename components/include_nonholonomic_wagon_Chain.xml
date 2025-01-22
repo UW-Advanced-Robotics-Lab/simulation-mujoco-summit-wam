@@ -61,6 +61,11 @@
         <joint name="wagon/hinge/world_y" armature="0.0001" axis="1 0 0" damping="0.01" pos="0 0 0" type="hinge"/>
         <joint name="wagon/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.01" pos="0 0 0" type="hinge"/>
         
+        <!-- Place two IMUs to get-back yaw angular-acceleration -->
+        <site name="imu_sensor_site_1_cart_base_link" pos="0.02 0.405425 0.08715" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+        <!-- Keeping the 2nd IMU-sensor 0.1 m away from the first. This value is used `state_pub_mujoco.py` when calculating the yaw angular-acceleration -->
+        <site name="imu_sensor_site_2_cart_base_link" pos="0.12 0.405425 0.08715" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
+
         <!-- === whl LINK === === === === -->
         <!-- Mobile whls Right Front (Swivel) -->
         <body name="wagon/RF" pos="-0.208544 -0.357375 0.08715">
