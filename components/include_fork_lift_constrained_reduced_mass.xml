@@ -24,14 +24,17 @@
         <geom name="fork_lift/col/base_link/box_body"       class="fork_lift/col" pos="0 0 0.8" size="0.4 0.4 0.75" type="box"/>
 
         <!-- world placement -->
-        <joint name="fork_lift/world_x" armature="0.0001" axis="0 -1 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="fork_lift/world_y" armature="0.0001" axis="1 0 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="fork_lift/world_z" armature="0.0001" axis="0 0 1" damping="1e+0"  pos="0 0 0" type="slide"></joint>
+        <joint name="fork_lift/world_x" armature="0.0001" axis="0 -1 0" damping="0" pos="0 0 0" type="slide"></joint>
+        <joint name="fork_lift/world_y" armature="0.0001" axis="1 0 0" damping="0" pos="0 0 0" type="slide"></joint>
+        <joint name="fork_lift/world_z" armature="0.0001" axis="0 0 1" damping="0"  pos="0 0 0" type="hinge"></joint>
 
         <!-- control Forklift base -->
         <joint name="fork_lift/pose/x"                      type="slide" pos="0 0 0.4" axis="0 -1 0"  damping="15"/>
         <joint name="fork_lift/pose/y"                      type="slide" pos="0 0 0.4" axis="1 0 0"  damping="15"/>
         <joint name="fork_lift/orie/z"                      type="hinge" pos="0 0 0.4" axis="0 0 1"  damping="10"/>
+
+        <!-- Place imu-sensors here. Have them rotated to match the MB control-axis | w x y z-->
+        <site name="imu_sensor_site_fork_lift" type="box" quat="0.7071068 0 0 -0.7071068" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
 
         <!-- === whl LINK === === === === -->
         <!-- Front-Left Wheel -->
