@@ -64,7 +64,7 @@
 
         <!-- Robot -->
         <!-- -0.72 0.5 0 -->
-        <body name="waterloo_steel" pos="-0.72 0.51 0" euler="0 0 -1.57079632679">
+        <body name="waterloo_steel" pos="-0.72 0.51 0" euler="0 0 0">
             <include file="../components/include_summit_wam_bhand_Chain.xml"/>
         </body>
         
@@ -448,33 +448,29 @@
 
         <!-- Fetch base -->
         <!-- Get Linear acceleration in Fetch local-frame -->
-        <!-- Place two IMUs to get-back yaw angular-acceleration -->
-        <accelerometer name="accelerometer_1_fetch" site="imu_sensor_site_1_fetch_base_link"/>
-        <accelerometer name="accelerometer_2_fetch" site="imu_sensor_site_2_fetch_base_link"/>
+        <accelerometer name="accelerometer_fetch" site="imu_sensor_site_fetch"/>
         <!-- Get Linear velocity in Fetch local-frame -->
-        <velocimeter name="velocimeter_fetch" site="imu_sensor_site_1_fetch_base_link"/>
+        <velocimeter name="velocimeter_fetch" site="imu_sensor_site_fetch"/>
         <!-- Get Angular velocity in Fetch local-frame -->
-        <gyro name="gyroscope_fetch" site="imu_sensor_site_1_fetch_base_link"/>
+        <gyro name="gyroscope_fetch" site="imu_sensor_site_fetch"/>
         <!-- Get Fetch gloabl-position -->
         <!-- “body” refers to the inertial frame of the body, while “xbody” refers to the regular frame of the body (usually centered at the joint with the parent body) -->
-        <framepos name="global_pos_fetch" objtype="site" objname="imu_sensor_site_1_fetch_base_link"/>
+        <framepos name="global_pos_fetch" objtype="site" objname="imu_sensor_site_fetch"/>
         <!-- Get Fetch gloabl-quaternion -->
-        <framequat name="global_quat_fetch" objtype="site" objname="imu_sensor_site_1_fetch_base_link"/>
+        <framequat name="global_quat_fetch" objtype="site" objname="imu_sensor_site_fetch"/>
 
         <!-- Fork-lift base -->
-        <!-- Get Linear acceleration in Cart local-frame -->
-        <!-- Place two IMUs to get-back yaw angular-acceleration -->
-        <accelerometer name="accelerometer_1_cart" site="imu_sensor_site_1_cart_base_link"/>
-        <accelerometer name="accelerometer_2_cart" site="imu_sensor_site_2_cart_base_link"/>
-        <!-- Get Linear velocity in Cart local-frame -->
-        <velocimeter name="velocimeter_cart" site="imu_sensor_site_1_cart_base_link"/>
-        <!-- Get Angular velocity in Cart local-frame -->
-        <gyro name="gyroscope_cart" site="imu_sensor_site_1_cart_base_link"/>
-        <!-- Get Cart gloabl-position -->
+        <!-- Get Linear acceleration in Fork-lift local-frame -->
+        <accelerometer name="accelerometer_fork_lift" site="imu_sensor_site_fork_lift"/>
+        <!-- Get Linear velocity in Fork-lift local-frame -->
+        <velocimeter name="velocimeter_fork_lift" site="imu_sensor_site_fork_lift"/>
+        <!-- Get Angular velocity in Fork-lift local-frame -->
+        <gyro name="gyroscope_fork_lift" site="imu_sensor_site_fork_lift"/>
+        <!-- Get Fork-lift gloabl-position -->
         <!-- “body” refers to the inertial frame of the body, while “xbody” refers to the regular frame of the body (usually centered at the joint with the parent body) -->
-        <framepos name="global_pos_cart" objtype="site" objname="imu_sensor_site_1_cart_base_link"/>
-        <!-- Get Cart gloabl-quaternion -->
-        <framequat name="global_quat_cart" objtype="site" objname="imu_sensor_site_1_cart_base_link"/>
+        <framepos name="global_pos_fork_lift" objtype="site" objname="imu_sensor_site_fork_lift"/>
+        <!-- Get Fork-lift gloabl-quaternion -->
+        <framequat name="global_quat_fork_lift" objtype="site" objname="imu_sensor_site_fork_lift"/>
 
 
     </sensor>
