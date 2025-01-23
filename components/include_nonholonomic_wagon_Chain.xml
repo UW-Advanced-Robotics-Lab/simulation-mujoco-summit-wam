@@ -51,15 +51,12 @@
         <!-- <geom name="wagon/col/base_link/arm_rest"             class="wagon/col" pos="0 0.098 0.55" quat="0.5 0.5 -0.5 -0.5" mesh="arm_rest"/> -->
         <!-- <geom name="wagon/col/base_link/cylinder_lidar"       class="wagon/col" pos="0.246 0.362 0.313" size="0.06 0.044" type="cylinder"/> -->
 
-        <!-- world placement: This is for the cart to be able to move freely in the world. Serves no other purpose than to be able to locate the COM of the cart w.r.t the world-frame -->
-        <!-- <joint name="wagon/world_x" armature="0.0001" axis="0 -1 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="wagon/world_y" armature="0.0001" axis="1 0 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="wagon/world_z" armature="0.0001" axis="0 0 1" damping="1e+0"  pos="0 0 0" type="slide"></joint> -->
-        <joint name="wagon/slide/world_x" armature="0.0001" axis="0 -1 0" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/slide/world_y" armature="0.0001" axis="1 0 0" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/slide/world_z" armature="0.0001" axis="0 0 1" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/hinge/world_y" armature="0.0001" axis="1 0 0" damping="0.01" pos="0 0 0" type="hinge"/>
-        <joint name="wagon/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.01" pos="0 0 0" type="hinge"/>
+        <!-- world placement: In order to enact non-holonomic constraints, we place these constraints at the rear-wheel mid-point -->
+
+        <joint name="wagon/slide/world_x" armature="0.0001" axis="0 -1 0" damping="0.0" pos="0.02 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/slide/world_y" armature="0.0001" axis="1 0 0" damping="0.0" pos="0.02 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/slide/world_z" armature="0.0001" axis="0 0 1" damping="0.0" pos="0.02 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.0" pos="0.02 0.405425 0.08715" type="hinge"/>
         
         <!-- Place two IMUs to get-back yaw angular-acceleration -->
         <site name="imu_sensor_site_1_cart_base_link" pos="0.02 0.405425 0.08715" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
@@ -168,7 +165,7 @@
 
                 <!-- Prismatic joint -->
                 <!-- <joint name="wagon/handle2"                  class="wagon/prismatic" range="-0.28 0.0"/>  -->
-                <joint name="wagon/handle2"                  class="wagon/prismatic" range="-0.25 0.0"/> 
+                <joint name="wagon/handle2"                  class="wagon/prismatic" range="-0.23 0.0"/> 
             </body>
         </body>
         

@@ -51,16 +51,17 @@
         <!-- <geom name="wagon/col/base_link/arm_rest"             class="wagon/col" pos="0 0.098 0.55" quat="0.5 0.5 -0.5 -0.5" mesh="arm_rest"/> -->
         <!-- <geom name="wagon/col/base_link/cylinder_lidar"       class="wagon/col" pos="0.246 0.362 0.313" size="0.06 0.044" type="cylinder"/> -->
 
-        <!-- world placement: This is for the cart to be able to move freely in the world. Serves no other purpose than to be able to locate the COM of the cart w.r.t the world-frame -->
-        <!-- <joint name="wagon/world_x" armature="0.0001" axis="0 -1 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="wagon/world_y" armature="0.0001" axis="1 0 0" damping="1e+11" pos="0 0 0" type="slide"></joint>
-        <joint name="wagon/world_z" armature="0.0001" axis="0 0 1" damping="1e+0"  pos="0 0 0" type="slide"></joint> -->
-        <joint name="wagon/slide/world_x" armature="0.0001" axis="0 -1 0" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/slide/world_y" armature="0.0001" axis="1 0 0" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/slide/world_z" armature="0.0001" axis="0 0 1" damping="0.01" pos="0 0 0" type="slide"/>
-        <joint name="wagon/hinge/world_y" armature="0.0001" axis="1 0 0" damping="0.01" pos="0 0 0" type="hinge"/>
-        <joint name="wagon/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.01" pos="0 0 0" type="hinge"/>
+        <!-- world placement: In order to enact non-holonomic constraints, we place these constraints at the rear-wheel mid-point -->
+        <joint name="wagon/slide/world_x" armature="0.0001" axis="0 -1 0" damping="0.0" pos="-0.025 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/slide/world_y" armature="0.0001" axis="1 0 0" damping="0.0" pos="-0.025 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/slide/world_z" armature="0.0001" axis="0 0 1" damping="0.0" pos="-0.025 0.405425 0.08715" type="slide"/>
+        <joint name="wagon/hinge/world_z" armature="0.0001" axis="0 0 1" damping="0.0" pos="-0.025 0.405425 0.08715" type="hinge"/>
         
+        <!-- Place two IMUs to get-back yaw angular-acceleration -->
+        <site name="imu_sensor_site_1_cart_base_link" pos="-0.025 0.405425 0.08715" type="box" size="0.05 0.05 0.05" rgba="0.9 0 0 0.3"/>
+        <!-- Keeping the 2nd IMU-sensor 0.1 m away from the first. This value is used `state_pub_mujoco.py` when calculating the yaw angular-acceleration -->
+        <site name="imu_sensor_site_2_cart_base_link" pos="0.075 0.405425 0.08715" type="box" size="0.05 0.05 0.05" rgba="0 0.9 0 0.3"/>
+
         <!-- === whl LINK === === === === -->
         <!-- Mobile whls Right Front (Swivel) -->
         <body name="wagon/RF" pos="-0.26068 -0.357375 0.08715">
