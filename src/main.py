@@ -63,8 +63,10 @@ def main():
     robot_c = rospy.get_param("launch_robot_c")
     # Wagon
     wagon_a = rospy.get_param("launch_wagon_a")
+    # Non-Holonomic Cart
+    wagon_b = rospy.get_param("launch_wagon_b")
     # List of robots to be loaded
-    robot_list = [robot_a, robot_b, robot_c, wagon_a]
+    robot_list = [robot_a, robot_b, robot_c, wagon_a, wagon_b]
     update_rate = int(freq_muj)
     steptime = 1.0/float(update_rate)
     r = rospy.Rate(update_rate)
