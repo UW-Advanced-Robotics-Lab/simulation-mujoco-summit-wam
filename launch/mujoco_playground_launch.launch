@@ -24,6 +24,9 @@
      <!-- Wagon -->
      <arg name="launch_wagon_a" default="True"/>
      <param name="launch_wagon_a" value="$(arg launch_wagon_a)"/>
+     <!-- Non-Holonomic Cart -->
+     <arg name="launch_wagon_b" default="True"/>
+     <param name="launch_wagon_b" value="$(arg launch_wagon_b)"/>
      
      <!-- Publish clock -->
      <node pkg="uwarl-mujoco-summit-wam-sim" type="clockpub.py" name="ClockPublisher" output="screen">\
