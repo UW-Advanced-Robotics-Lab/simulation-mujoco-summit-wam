@@ -25,8 +25,8 @@
     <include file="../components/include_summit_wam_bhand_actuators.xml"/>
     <include file="../components/include_nonholonomic_cart_Dependencies.xml"/>  
 
-    <include file="../components/include_shelves_Dependencies.xml"/>
-    <include file="../components/include_walls_Dependencies.xml"/>
+    <!-- <include file="../components/include_shelves_Dependencies.xml"/>
+    <include file="../components/include_walls_Dependencies.xml"/> -->
 
     <!--###############
         ### Config: ###
