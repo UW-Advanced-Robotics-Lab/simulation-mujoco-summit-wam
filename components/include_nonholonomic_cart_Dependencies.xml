@@ -60,10 +60,10 @@
     <contact>
         <!-- <exclude body1="cart/base_link" body2="cart/swivel_hub/L_link"/>
         <exclude body1="cart/base_link" body2="cart/swivel_hub/R_link"/> -->
-        <exclude body1="cart/base_link" body2="cart/swivel_hub/C_link"/>
+        <!-- <exclude body1="cart/base_link" body2="cart/swivel_hub/C_link"/> -->
         <!-- <exclude body1="cart/swivel_hub/L_link" body2="cart/whl/FL_link"/>
         <exclude body1="cart/swivel_hub/R_link" body2="cart/whl/FR_link"/> -->
-        <exclude body1="cart/swivel_hub/C_link" body2="cart/whl/FC_link"/>
+        <!-- <exclude body1="cart/swivel_hub/C_link" body2="cart/whl/FC_link"/> -->
         <exclude body1="cart/static_hub/L_link" body2="cart/whl/RL_link"/>
         <exclude body1="cart/static_hub/R_link" body2="cart/whl/RR_link"/>
     </contact>
